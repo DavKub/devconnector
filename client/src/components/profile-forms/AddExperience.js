@@ -82,7 +82,6 @@ const AddExperience = ({ addExperience, history }) => {
               type='checkbox'
               name='current'
               checked={current}
-              value=''
               value={current}
               onChange={e => {
                 setFormData({ ...formData, current: !current });
@@ -125,4 +124,4 @@ AddExperience.propTypes = {
   addExperience: PropTypes.func.isRequired
 };
 
-export default connect(null, { addExperience })(AddExperience);
+export default connect(null, { addExperience })(withRouter(AddExperience));
